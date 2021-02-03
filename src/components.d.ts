@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ScvSideDrawer {
+        "title": string;
     }
 }
 declare global {
@@ -22,6 +23,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ScvSideDrawer {
+        "title"?: string;
     }
     interface IntrinsicElements {
         "scv-side-drawer": ScvSideDrawer;

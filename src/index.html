@@ -9,6 +9,13 @@
     <script nomodule src="/build/web-components-stencil.js"></script>
   </head>
   <body>
-    <scv-side-drawer></scv-side-drawer>
+    <scv-side-drawer title="Main menu"></scv-side-drawer>
+
+    <script>
+      const sD = document.querySelector('scv-side-drawer');
+      setTimeout(() => {
+        sD.title = 'It changed!';
+      }, 3000);
+    </script>
   </body>
 </html>
