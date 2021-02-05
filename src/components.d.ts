@@ -11,6 +11,10 @@ export namespace Components {
         "opened": boolean;
         "title": string;
     }
+    interface ScvTooltip {
+        "message": string;
+        "title": string;
+    }
 }
 declare global {
     interface HTMLScvSideDrawerElement extends Components.ScvSideDrawer, HTMLStencilElement {
@@ -19,8 +23,15 @@ declare global {
         prototype: HTMLScvSideDrawerElement;
         new (): HTMLScvSideDrawerElement;
     };
+    interface HTMLScvTooltipElement extends Components.ScvTooltip, HTMLStencilElement {
+    }
+    var HTMLScvTooltipElement: {
+        prototype: HTMLScvTooltipElement;
+        new (): HTMLScvTooltipElement;
+    };
     interface HTMLElementTagNameMap {
         "scv-side-drawer": HTMLScvSideDrawerElement;
+        "scv-tooltip": HTMLScvTooltipElement;
     }
 }
 declare namespace LocalJSX {
@@ -28,8 +39,13 @@ declare namespace LocalJSX {
         "opened"?: boolean;
         "title"?: string;
     }
+    interface ScvTooltip {
+        "message"?: string;
+        "title"?: string;
+    }
     interface IntrinsicElements {
         "scv-side-drawer": ScvSideDrawer;
+        "scv-tooltip": ScvTooltip;
     }
 }
 export { LocalJSX as JSX };
@@ -37,6 +53,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "scv-side-drawer": LocalJSX.ScvSideDrawer & JSXBase.HTMLAttributes<HTMLScvSideDrawerElement>;
+            "scv-tooltip": LocalJSX.ScvTooltip & JSXBase.HTMLAttributes<HTMLScvTooltipElement>;
         }
     }
 }

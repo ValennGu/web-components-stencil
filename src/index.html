@@ -21,6 +21,9 @@
         text-decoration: none;
         color: grey;
       }
+      .test {
+        display: flex;
+      }
     </style>
   </head>
   <body>
@@ -28,7 +31,7 @@
     <scv-side-drawer title="Main menu">
       <nav class="side-nav">
         <ul>
-          <li><a href="">Link</a></li>
+          <li><a href="">Link</a><scv-tooltip title="link" message="This is a custom link"></scv-tooltip></li>
           <li><a href="">Link</a></li>
           <li><a href="">Link</a></li>
           <li><a href="">Link</a></li>
@@ -36,6 +39,11 @@
       </nav>
     </scv-side-drawer>
 
+    <div class="test">
+      Customer service
+      <scv-tooltip title="Custom service" message="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."></scv-tooltip>
+    </div>
+    
     <script>
       const sD = document.querySelector('scv-side-drawer');
       setTimeout(() => {
