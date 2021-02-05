@@ -1,0 +1,71 @@
+{
+  "locale": "en",
+
+  "flow-onboarding": "",
+
+  "onboarding-start.title": "Verify your identity",
+  "onboarding-start.tab-qr": "QR Code",
+  "onboarding-start.tab-sms": "SMS",
+  
+  "tab-qr.message": "Please use the camera on your mobile phone to scan th QR code below.",
+  "tab-qr.helper": "You can also try sending an ",
+  "tab-qr.sms-button": "SMS.",
+
+  "tab-sms.message": "Please enter your mobile number to receive a link via SMS.",
+  "tab-sms.label-prefix": "prefix",
+  "tab-sms.label-number": "number",
+  "tab-sms.placeholder-prefix": "",
+  "tab-sms.placeholder-number": "your number",
+  "tab-sms.submit-button": "Send SMS",
+
+
+  "onboarding-progress.state-steps-header": "Processing...",
+  "onboarding-progress.state-steps-message": "Please continue your identity verification via your mobile phone.",
+
+  "onboarding-progress.state-steps-document": "ID document",
+  "onboarding-progress.state-steps-selfie": "Selfie",
+  "onboarding-progress.state-steps-metadata": "Location",
+
+  "onboarding-progress.state-header": "Please wait...",
+  "onboarding-progress.state-hint": "Continue on your mobile device...",
+
+  "onboarding-progress.state-error-header": "Something's not right...",
+  "onboarding-progress.state-error-hint": "We've lost connection to the server ",
+
+  "onboarding-progress.state-finished-header": "Verification submitted",
+  "onboarding-progress.state-finished-hint": "You're all set. Way to go!",
+
+
+
+  "onboarding-progress.verification-state.header.steps": "Processing...",
+  "onboarding-progress.verification-state.header.loading": "Please wait...",
+  "onboarding-progress.verification-state.header.error": "Something's not right...",
+  "onboarding-progress.verification-state.header.submitted": "Verification submitted",
+
+  "onboarding-progress.verification-state.message.steps": "Please continue your identity verification via your mobile phone.",
+  "onboarding-progress.verification-state.message.loading": "Continue on your mobile device.",
+  "onboarding-progress.verification-state.message.error": "We've lost connections to the server",
+  "onboarding-progress.verification-state.message.submitted": "You're all set. Way to go!",
+
+  "onboarding-progress.verification-state.footer.something-wrong": "Did something go wrong? Try again.",
+  "onboarding-progress.verification-state.footer.contact-provider": "Please try again or contact your provider.",
+
+  "onboarding-progress.verification-state.step.documents": "ID document",
+  "onboarding-progress.verification-state.step.selfie": "ID document",
+  "onboarding-progress.verification-state.step.metadata": "Location",
+  
+
+
+  "flow-verify": "",
+  "step-document-capture": "",
+  "step-document-details": "",
+  "step-document-intro": "",
+  "step-document-select": "",
+  "step-error": "",
+  "step-metadata-capture": "",
+  "step-metadata-intro": "",
+  "step-permission": "",
+  "step-selfie-capture": "",
+  "step-selfie-intro": "",
+  "step-summary": "",
+}

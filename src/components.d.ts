@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ScvSideDrawer {
+        "open": () => Promise<void>;
+        "opened": boolean;
         "title": string;
     }
 }
@@ -23,6 +25,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ScvSideDrawer {
+        "opened"?: boolean;
         "title"?: string;
     }
     interface IntrinsicElements {
