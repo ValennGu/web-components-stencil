@@ -9,11 +9,13 @@ export namespace Components {
     interface ScvSideDrawer {
         "open": () => Promise<void>;
         "opened": boolean;
-        "title": string;
+        "sideDrawerTitle": string;
+    }
+    interface ScvStockPrice {
     }
     interface ScvTooltip {
         "message": string;
-        "title": string;
+        "tooltipTitle": string;
     }
 }
 declare global {
@@ -23,6 +25,12 @@ declare global {
         prototype: HTMLScvSideDrawerElement;
         new (): HTMLScvSideDrawerElement;
     };
+    interface HTMLScvStockPriceElement extends Components.ScvStockPrice, HTMLStencilElement {
+    }
+    var HTMLScvStockPriceElement: {
+        prototype: HTMLScvStockPriceElement;
+        new (): HTMLScvStockPriceElement;
+    };
     interface HTMLScvTooltipElement extends Components.ScvTooltip, HTMLStencilElement {
     }
     var HTMLScvTooltipElement: {
@@ -31,20 +39,24 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "scv-side-drawer": HTMLScvSideDrawerElement;
+        "scv-stock-price": HTMLScvStockPriceElement;
         "scv-tooltip": HTMLScvTooltipElement;
     }
 }
 declare namespace LocalJSX {
     interface ScvSideDrawer {
         "opened"?: boolean;
-        "title"?: string;
+        "sideDrawerTitle"?: string;
+    }
+    interface ScvStockPrice {
     }
     interface ScvTooltip {
         "message"?: string;
-        "title"?: string;
+        "tooltipTitle"?: string;
     }
     interface IntrinsicElements {
         "scv-side-drawer": ScvSideDrawer;
+        "scv-stock-price": ScvStockPrice;
         "scv-tooltip": ScvTooltip;
     }
 }
@@ -53,6 +65,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "scv-side-drawer": LocalJSX.ScvSideDrawer & JSXBase.HTMLAttributes<HTMLScvSideDrawerElement>;
+            "scv-stock-price": LocalJSX.ScvStockPrice & JSXBase.HTMLAttributes<HTMLScvStockPriceElement>;
             "scv-tooltip": LocalJSX.ScvTooltip & JSXBase.HTMLAttributes<HTMLScvTooltipElement>;
         }
     }

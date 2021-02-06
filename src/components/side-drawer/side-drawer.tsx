@@ -9,7 +9,7 @@ export class SideDrawer {
   // Changes on the variables with the state dec. will trigger the render func. again
   @State() showContactInfo = false;
   
-  @Prop({ reflect: true }) title: string = 'Default title';
+  @Prop({ reflect: true }) sideDrawerTitle: string = 'Default title';
   @Prop({ reflect: true, mutable: true }) opened: boolean;
 
   onCloseSideDrawer() {
@@ -21,7 +21,7 @@ export class SideDrawer {
   }
 
   @Method()
-  open() {
+  async open() {
     this.opened = true;
   }
   
@@ -45,7 +45,7 @@ export class SideDrawer {
       <div class="backdrop" onClick={this.onCloseSideDrawer.bind(this)}/>,
       <aside>
         <header>
-          <h1>{this.title}</h1>
+          <h1>{this.sideDrawerTitle}</h1>
           <button onClick={this.onCloseSideDrawer.bind(this)}>X</button>
         </header>
         <section id="tabs">
