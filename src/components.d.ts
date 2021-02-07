@@ -11,7 +11,12 @@ export namespace Components {
         "opened": boolean;
         "sideDrawerTitle": string;
     }
+    interface ScvSpinner {
+    }
+    interface ScvStockFinder {
+    }
     interface ScvStockPrice {
+        "stockSymbol": string;
     }
     interface ScvTooltip {
         "message": string;
@@ -24,6 +29,18 @@ declare global {
     var HTMLScvSideDrawerElement: {
         prototype: HTMLScvSideDrawerElement;
         new (): HTMLScvSideDrawerElement;
+    };
+    interface HTMLScvSpinnerElement extends Components.ScvSpinner, HTMLStencilElement {
+    }
+    var HTMLScvSpinnerElement: {
+        prototype: HTMLScvSpinnerElement;
+        new (): HTMLScvSpinnerElement;
+    };
+    interface HTMLScvStockFinderElement extends Components.ScvStockFinder, HTMLStencilElement {
+    }
+    var HTMLScvStockFinderElement: {
+        prototype: HTMLScvStockFinderElement;
+        new (): HTMLScvStockFinderElement;
     };
     interface HTMLScvStockPriceElement extends Components.ScvStockPrice, HTMLStencilElement {
     }
@@ -39,6 +56,8 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "scv-side-drawer": HTMLScvSideDrawerElement;
+        "scv-spinner": HTMLScvSpinnerElement;
+        "scv-stock-finder": HTMLScvStockFinderElement;
         "scv-stock-price": HTMLScvStockPriceElement;
         "scv-tooltip": HTMLScvTooltipElement;
     }
@@ -48,7 +67,13 @@ declare namespace LocalJSX {
         "opened"?: boolean;
         "sideDrawerTitle"?: string;
     }
+    interface ScvSpinner {
+    }
+    interface ScvStockFinder {
+        "onSymbol-selected"?: (event: CustomEvent<string>) => void;
+    }
     interface ScvStockPrice {
+        "stockSymbol"?: string;
     }
     interface ScvTooltip {
         "message"?: string;
@@ -56,6 +81,8 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "scv-side-drawer": ScvSideDrawer;
+        "scv-spinner": ScvSpinner;
+        "scv-stock-finder": ScvStockFinder;
         "scv-stock-price": ScvStockPrice;
         "scv-tooltip": ScvTooltip;
     }
@@ -65,6 +92,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "scv-side-drawer": LocalJSX.ScvSideDrawer & JSXBase.HTMLAttributes<HTMLScvSideDrawerElement>;
+            "scv-spinner": LocalJSX.ScvSpinner & JSXBase.HTMLAttributes<HTMLScvSpinnerElement>;
+            "scv-stock-finder": LocalJSX.ScvStockFinder & JSXBase.HTMLAttributes<HTMLScvStockFinderElement>;
             "scv-stock-price": LocalJSX.ScvStockPrice & JSXBase.HTMLAttributes<HTMLScvStockPriceElement>;
             "scv-tooltip": LocalJSX.ScvTooltip & JSXBase.HTMLAttributes<HTMLScvTooltipElement>;
         }

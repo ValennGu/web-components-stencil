@@ -6,8 +6,19 @@
     <title>Stencil Component Starter</title>
     <script type="module" src="/build/web-components-stencil.esm.js"></script>
     <script nomodule src="/build/web-components-stencil.js"></script>
+    <style>
+      html {
+        --color-primary: #3b013b;
+        --color-primary-inverse: #f3f3f3;
+        --color-primary-highlight: #750175;
+        --color-primary-danger: #ff3939;  
+      } 
+    </style>
   </head>
   <body>
-    <scv-stock-price></scv-stock-price>
-  </body>
+
+    <scv-stock-price stock-symbol="AAPL"></scv-stock-price>
+    <scv-stock-finder></scv-stock-finder>
+  
+</body>
 </html>
